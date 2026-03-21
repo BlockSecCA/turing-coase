@@ -17,35 +17,30 @@ export function Sliders({ params, onUpdate }: SlidersProps) {
   const [expandedParam, setExpandedParam] = useState<string | null>(null)
 
   return (
-    <div className="space-y-2">
+    <div className="space-y-1">
       {SLIDER_CONFIG.map(({ key, min, max, step }) => {
         const info = PARAM_INFO[key]
         const value = params[key as keyof typeof params]
         const expanded = expandedParam === key
 
         return (
-          <div key={key} className="bg-gray-900 rounded-lg border border-gray-800 p-3">
-            <button
-              onClick={() => setExpandedParam(expanded ? null : key)}
-              className="w-full text-left flex justify-between items-start gap-2"
-            >
-              <div className="flex-1 min-w-0">
-                <div className="text-xs font-semibold text-gray-200">{info.economic}</div>
-                <div className="text-xs text-gray-500 mt-0.5">{info.question}</div>
-              </div>
-              <div className="flex items-center gap-2 flex-shrink-0">
-                <span className="text-xs text-gray-500 font-mono">{value.toFixed(3)}</span>
+          <div key={key} className="bg-gray-900 rounded border border-gray-800 px-2.5 py-1.5 overflow-hidden">
+            {/* Header row: label + slider + value */}
+            <div className="flex items-center gap-2 min-w-0">
+              <button
+                onClick={() => setExpandedParam(expanded ? null : key)}
+                className="flex items-center gap-1 flex-shrink-0"
+              >
                 <svg
-                  className={`w-3 h-3 text-gray-600 transition-transform ${expanded ? 'rotate-180' : ''}`}
+                  className={`w-2.5 h-2.5 text-gray-600 transition-transform ${expanded ? 'rotate-90' : ''}`}
                   fill="none"
                   viewBox="0 0 24 24"
                   stroke="currentColor"
                 >
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
                 </svg>
-              </div>
-            </button>
-            <div className="mt-2.5">
+                <span className="text-xs font-medium text-gray-300 whitespace-nowrap">{info.economic}</span>
+              </button>
               <input
                 type="range"
                 min={min}
@@ -53,28 +48,34 @@ export function Sliders({ params, onUpdate }: SlidersProps) {
                 step={step}
                 value={value}
                 onChange={(e) => onUpdate(key, parseFloat(e.target.value))}
-                className="w-full h-1.5 bg-gray-800 rounded-lg appearance-none cursor-pointer accent-amber-600"
+                className="flex-1 min-w-0 h-1 bg-gray-800 rounded-lg appearance-none cursor-pointer accent-amber-600"
               />
-              <div className="flex justify-between mt-1">
-                <span className="text-gray-600" style={{ fontSize: '9px' }}>{info.lowLabel}</span>
-                <span className="text-gray-600" style={{ fontSize: '9px' }}>{info.highLabel}</span>
-              </div>
+              <span className="text-xs text-gray-500 font-mono flex-shrink-0">{value.toFixed(3)}</span>
             </div>
+            {/* Inline range labels */}
+            <div className="flex justify-between pl-5 pr-12 -mt-0.5">
+              <span className="text-gray-600" style={{ fontSize: '8px' }}>{info.lowLabel}</span>
+              <span className="text-gray-600" style={{ fontSize: '8px' }}>{info.highLabel}</span>
+            </div>
+            {/* Expandable detail */}
             {expanded && (
-              <div className="mt-3 pt-3 border-t border-gray-800 space-y-2">
-                <div className="flex gap-2">
-                  <div className="flex-shrink-0 w-1 rounded-full bg-gray-700" />
-                  <div className="text-xs text-gray-500">
-                    <span className="text-gray-400 font-medium">Low:</span> {info.low}
+              <div className="mt-1.5 pt-1.5 border-t border-gray-800 pl-5">
+                <div className="text-xs text-gray-500 mb-1.5">{info.question}</div>
+                <div className="space-y-1">
+                  <div className="flex gap-1.5 items-start">
+                    <div className="flex-shrink-0 w-0.5 h-3 rounded-full bg-gray-700 mt-0.5" />
+                    <div style={{ fontSize: '11px' }} className="text-gray-500">
+                      <span className="text-gray-400">Low:</span> {info.low}
+                    </div>
                   </div>
-                </div>
-                <div className="flex gap-2">
-                  <div className="flex-shrink-0 w-1 rounded-full bg-amber-700" />
-                  <div className="text-xs text-gray-500">
-                    <span className="text-gray-400 font-medium">High:</span> {info.high}
+                  <div className="flex gap-1.5 items-start">
+                    <div className="flex-shrink-0 w-0.5 h-3 rounded-full bg-amber-700 mt-0.5" />
+                    <div style={{ fontSize: '11px' }} className="text-gray-500">
+                      <span className="text-gray-400">High:</span> {info.high}
+                    </div>
                   </div>
+                  <div style={{ fontSize: '10px' }} className="text-gray-600 italic">{info.examples}</div>
                 </div>
-                <div className="text-xs text-gray-600 italic mt-1">{info.examples}</div>
               </div>
             )}
           </div>

@@ -63,7 +63,7 @@ export function SimulationPage() {
                 >
                   The yellow dot is your current position. Small dots mark the presets.
                   Moving sliders moves you through this space. Crossing a color boundary means
-                  a regime transition — the pattern type changes, often abruptly.
+                  a regime transition, and the pattern type changes, often abruptly.
                 </p>
               </div>
             </div>
@@ -97,7 +97,7 @@ export function SimulationPage() {
           <div className="text-xs text-gray-500 leading-relaxed space-y-2">
             <p>
               In 1952, Alan Turing showed that two interacting chemicals with different diffusion
-              rates spontaneously produce stable, bounded patterns on a uniform substrate —
+              rates spontaneously produce stable, bounded patterns on a uniform substrate,
               explaining how spots form on skin without a blueprint.
             </p>
             <p>
@@ -106,8 +106,8 @@ export function SimulationPage() {
             </p>
             <p>
               These are the same answer. The simulation treats an economy as a Turing system.
-              The patterns that form are firms. The pattern regime — spots, stripes, labyrinths,
-              or monopolistic condensation — is determined by the institutional and technological
+              The patterns that form are firms. The pattern regime (spots, stripes, labyrinths,
+              or monopolistic condensation) is determined by the institutional and technological
               substrate through which these forces propagate.
             </p>
           </div>

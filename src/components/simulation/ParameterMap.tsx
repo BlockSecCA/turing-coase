@@ -81,23 +81,26 @@ export function ParameterMap({ f, k, Du, Dv }: ParameterMapProps) {
 
   return (
     <div>
-      <canvas
-        ref={canvasRef}
-        width={MAP_W}
-        height={MAP_H}
-        className="rounded border border-gray-800"
-        style={{ imageRendering: 'auto', width: MAP_W, height: MAP_H }}
-      />
-      <div className="flex justify-between mt-1">
-        <span style={{ fontSize: '9px' }} className="text-gray-600">{'<- Stagnant'}</span>
-        <span style={{ fontSize: '9px' }} className="text-gray-600">New Opportunity Rate</span>
-        <span style={{ fontSize: '9px' }} className="text-gray-600">{'Fertile ->'}</span>
-      </div>
-      <div className="flex justify-between items-center mt-0.5">
-        <div className="flex flex-col" style={{ fontSize: '9px' }}>
-          <span className="text-gray-600">{'^ Durable'}</span>
-          <span className="text-gray-600 mt-8">{'v Fragile'}</span>
+      {/* Canvas with Y-axis label alongside */}
+      <div className="flex gap-1">
+        <div className="flex flex-col justify-between py-1" style={{ fontSize: '8px' }}>
+          <span className="text-gray-600 -rotate-90 origin-center whitespace-nowrap">Durable</span>
+          <span className="text-gray-500 -rotate-90 origin-center whitespace-nowrap" style={{ fontSize: '7px' }}>Org. Decay</span>
+          <span className="text-gray-600 -rotate-90 origin-center whitespace-nowrap">Fragile</span>
         </div>
+        <canvas
+          ref={canvasRef}
+          width={MAP_W}
+          height={MAP_H}
+          className="rounded border border-gray-800"
+          style={{ imageRendering: 'auto', width: MAP_W, height: MAP_H }}
+        />
+      </div>
+      {/* X-axis label */}
+      <div className="flex justify-between mt-1 ml-4">
+        <span style={{ fontSize: '8px' }} className="text-gray-600">Stagnant</span>
+        <span style={{ fontSize: '7px' }} className="text-gray-500">New Opportunity Rate</span>
+        <span style={{ fontSize: '8px' }} className="text-gray-600">Fertile</span>
       </div>
       <div className="mt-2 flex items-center gap-2">
         <div

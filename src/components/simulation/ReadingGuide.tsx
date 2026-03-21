@@ -10,16 +10,16 @@ export function ReadingGuide({ params }: ReadingGuideProps) {
   let regimeLabel: string
   let regimeColor: string
   if (ratio < 1.5) {
-    regimeLabel = 'Overhead dominates \u2014 firms stay small'
+    regimeLabel = 'Overhead dominates, firms stay small'
     regimeColor = 'text-gray-400'
   } else if (ratio < 2.5) {
-    regimeLabel = 'Balanced \u2014 classical Coasean boundaries'
+    regimeLabel = 'Balanced: classical Coasean boundaries'
     regimeColor = 'text-amber-400'
   } else if (ratio < 3.5) {
-    regimeLabel = 'Coordination reaching further \u2014 larger structures'
+    regimeLabel = 'Coordination reaching further, larger structures'
     regimeColor = 'text-orange-400'
   } else {
-    regimeLabel = 'Non-local coordination \u2014 platform/monopoly territory'
+    regimeLabel = 'Non-local coordination: platform/monopoly territory'
     regimeColor = 'text-red-400'
   }
 
