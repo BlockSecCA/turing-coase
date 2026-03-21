@@ -1,14 +1,14 @@
 # Economic Morphogenesis
 
-Interactive Gray-Scott reaction-diffusion simulator exploring why firms form, the same reason spots form on animal skin.
+Interactive visualization of economic morphogenesis: why firms form, the same reason spots form on animal skin.
 
-**[Launch the simulation](https://blocksecca.github.io/turing-coase/)**
+**[Launch the visualization](https://blocksecca.github.io/turing-coase/)**
 
 **[Read the full essay on pub.blocksec.ca](https://pub.blocksec.ca)** *(link TBD once published)*
 
 ## What It Does
 
-The simulation runs a [Gray-Scott model](https://groups.csail.mit.edu/mac/projects/amorphous/GrayScott/) with economic labels on the parameters. Two chemicals (coordination gain and organizational overhead) interact and diffuse at different rates on a 200x200 grid. The patterns that emerge are "firms."
+The visualization runs a [Gray-Scott model](https://groups.csail.mit.edu/mac/projects/amorphous/GrayScott/) with economic labels on the parameters. Two chemicals (coordination gain and organizational overhead) interact and diffuse at different rates on a 200x200 grid. The patterns that emerge are "firms."
 
 Six historical presets map to different economic eras:
 
