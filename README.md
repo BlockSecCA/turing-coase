@@ -144,7 +144,7 @@ The economics literature has reaction-diffusion models for spatial agglomeration
 
 ---
 
-*Carlos A., March 2026*
+*Carlos, March 2026*
 
 *I'm not an economist or a mathematician. I'm a pattern noticer. One day, thinking about firms as features on an economic "skin," I realized that the simplest explanation for why a uniform substrate develops bounded structures is Turing's, and that Coase had already given the economic version of the same answer, thirty-five years earlier.*
 
