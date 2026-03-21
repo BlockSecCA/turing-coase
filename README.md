@@ -32,7 +32,7 @@ The boundary of the firm is not a decision someone makes. It is where coordinati
 
 In Turing's model, patterns form on a substrate, a field of cells with specific material properties that determine how fast each chemical can spread. Change the substrate, change the pattern.
 
-The economic substrate is **institutional infrastructure**: enforceable contracts, money, accounting standards, legal personhood, communication channels, shared norms. This is the "skin" on which economic patterns form.
+The economic substrate is everything through which coordination and overhead propagate: institutional infrastructure, economic conditions, and regulatory regimes. Money, contracts, accounting standards, corporate personhood, competition law, labor regulation, trade policy. These are not features of any individual firm. They are properties of the medium that all firms form on. This is the "skin" on which economic patterns form.
 
 And this skin has a developmental history:
 
@@ -46,7 +46,11 @@ And this skin has a developmental history:
 
 - **Corporate personhood** makes the spot self-sustaining. Before it, firms dissolved when their principal died. After it, the pattern persists independently of any individual. The skin remembers the spot.
 
+- **Regulatory regimes** are external constraints on the pattern itself. Antitrust caps spot size. Licensing sets a minimum activation threshold for spot nucleation. Labor and environmental regulation modify the inhibitor's properties (they add overhead that scales with firm activity). Securities regulation changes how capital flows through the substrate.
+
 Each institutional layer does not just enable new firms. It changes what kinds of patterns are possible at all.
+
+And the skin never gets thinner. It only accumulates layers. A modern economy cannot revert to bazaar morphology because the inhibitor channels are too well developed. De-patterning only happens through institutional collapse: the skin thins, firms dissolve, and the economy falls back to whatever pattern the remaining substrate supports. This is what you observe in failed states.
 
 ## Technology Changes the Skin
 
