@@ -110,6 +110,9 @@ export function SimulationPage() {
               or monopolistic condensation) is determined by the institutional and technological
               substrate through which these forces propagate.
             </p>
+            <p>
+              Read the full essay: <a href="https://pub.blocksec.ca/posts/when-coase-met-turing/" className="text-gray-400 hover:text-gray-200 underline underline-offset-2 transition-colors">When Coase Met Turing</a>.
+            </p>
           </div>
         </div>
       </div>
